@@ -81,16 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Este es el articulo {{$id}} de nombre {{$nombre}}
                 </div>
 
                 <div class="links">
-                    <a href="Datos">Datos</a>
-                    <a href="Blog/1">Blog</a>
-                    <a href="Blogconnombre/1/Xabi">Blog con nombre</a>
-                    <a href="saludo">Saludo</a>
-                    <a href="saludoconnombre/Xabi">Saludo con nombre</a>
-                    <a href="saludoconnombreycolor/Xabi">Saludo con nombre y color</a>
+                    <a href="/">Home</a>
                 </div>
             </div>
         </div>
