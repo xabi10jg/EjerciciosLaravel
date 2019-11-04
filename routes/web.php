@@ -22,7 +22,7 @@ Route::get('Blog/{id}', function ($id) {
 });
 Route::get('Blogconnombre/{id}/{nombre}', function ($id, $nombre) {
     return view('Blogconnombre',['id'=>$id, 'nombre'=>$nombre]);
-});
+})->where(array('nombre'=>'[a-zA-Z]+','id'=>'[0-9]+'));
 Route::get('saludo', 'SaludoController@Saludo');
 Route::get('saludoconnombre/{nombre}', 'SaludoController@SaludoConNombre');
 Route::get('saludoconnombreycolor/{nombre}/{color?}', 'SaludoController@SaludoConNombreYColor');
