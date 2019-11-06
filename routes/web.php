@@ -26,3 +26,5 @@ Route::get('Blogconnombre/{id}/{nombre}', function ($id, $nombre) {
 Route::get('saludo', 'SaludoController@Saludo');
 Route::get('saludoconnombre/{nombre}', 'SaludoController@SaludoConNombre');
 Route::get('saludoconnombreycolor/{nombre}/{color?}', 'SaludoController@SaludoConNombreYColor');
+Route::get('formulario', 'FormularioController@mostrarvista');
+Route::get('formulario/get', 'FormularioController@recogerdatos')->name('storeform');
