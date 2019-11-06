@@ -28,3 +28,5 @@ Route::get('saludoconnombre/{nombre}', 'SaludoController@SaludoConNombre');
 Route::get('saludoconnombreycolor/{nombre}/{color?}', 'SaludoController@SaludoConNombreYColor');
 Route::get('formulario', 'FormularioController@mostrarvista');
 Route::get('formulario/get', 'FormularioController@recogerdatos')->name('storeform');
+Route::get('formulario2', 'FormularioController@mostrarvista2');
+Route::post('formulario2/post', 'FormularioController@recogerdatos2')->name('storeform2');

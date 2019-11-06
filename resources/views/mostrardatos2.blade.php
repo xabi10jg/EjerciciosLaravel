@@ -80,19 +80,13 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                @foreach ($idiomas as $idioma)
+                     <p>{{$idioma->idioma}}: {{$idioma->saludo}} {{$nombre}}</p>
+
+                @endforeach
 
                 <div class="links">
-                    <a href="Datos">Datos</a>
-                    <a href="Blog/1">Blog</a>
-                    <a href="Blogconnombre/1/Xabi">Blog con nombre</a>
-                    <a href="saludo">Saludo</a>
-                    <a href="saludoconnombre/Xabi">Saludo con nombre</a>
-                    <a href="saludoconnombreycolor/Xabi">Saludo con nombre y color</a>
-                    <a href="formulario">Formulario</a>
-                    <a href="formulario2">Formulario 2</a>
+                    <a href="/">Home</a>
                 </div>
             </div>
         </div>
