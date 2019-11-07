@@ -80,21 +80,15 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                
+                    Nombre: {{$nombre}}<br>
+                    Apellido: {{$apellido}}<br>
+                    E-mail: {{$email}}<br>
+                    Teléfono: {{$telefono}}
+                
 
                 <div class="links">
-                    <a href="Datos">Datos</a>
-                    <a href="Blog/1">Blog</a>
-                    <a href="Blogconnombre/1/Xabi">Blog con nombre</a>
-                    <a href="saludo">Saludo</a>
-                    <a href="saludoconnombre/Xabi">Saludo con nombre</a>
-                    <a href="saludoconnombreycolor/Xabi">Saludo con nombre y color</a>
-                    <a href="formulario">Formulario</a>
-                    <a href="formulario2">Formulario 2</a>
-                    <a href="formularioValidados">Formulario Validado</a>
-                    <a href="formularioValidados2">Formulario Validado 2</a>
+                    <a href="/">Home</a>
                 </div>
             </div>
         </div>

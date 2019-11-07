@@ -80,21 +80,29 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+              <form method="get" action="{{route('datosvalidados2')}}">
+                  
+                  Nombre: <input type="text" name="nombre" value="{{old('nombre')}}"><br>
+                  Apellido: <input type="text" name="apellido" value="{{old('apellido')}}"><br>
+                  E-mail: <input type="text" name="email" value="{{old('email')}}"><br>
+                  Teléfono: <input type="text" name="telefono" value="{{old('telefono')}}"><br>
+
+
+
+                  <input type="submit" name="submit">
+              </form>
+              @if ($errors->any())
+                <div class="alert alert-danger">
+                  <ul>
+                     @foreach ($errors->all() as $error)
+                     <li>{{ $error }}</li>
+                     @endforeach
+                 </ul>
+             </div>
+            @endif
 
                 <div class="links">
-                    <a href="Datos">Datos</a>
-                    <a href="Blog/1">Blog</a>
-                    <a href="Blogconnombre/1/Xabi">Blog con nombre</a>
-                    <a href="saludo">Saludo</a>
-                    <a href="saludoconnombre/Xabi">Saludo con nombre</a>
-                    <a href="saludoconnombreycolor/Xabi">Saludo con nombre y color</a>
-                    <a href="formulario">Formulario</a>
-                    <a href="formulario2">Formulario 2</a>
-                    <a href="formularioValidados">Formulario Validado</a>
-                    <a href="formularioValidados2">Formulario Validado 2</a>
+                    <a href="/">Home</a>
                 </div>
             </div>
         </div>

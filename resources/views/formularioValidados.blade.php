@@ -80,17 +80,26 @@
             @endif
 
             <div class="content">
-              <form method="get" action="{{route('storeform')}}">
+              <form method="get" action="{{route('datosvalidados')}}">
                   
-                  Nombre: <input type="text" name="nombre"><br>
-                  Apellido: <input type="text" name="apellido"><br>
-                  E-mail: <input type="text" name="mail"><br>
-                  Teléfono: <input type="text" name="telefono"><br>
+                  Nombre: <input type="text" name="nombre" value="{{old('nombre')}}"><br>
+                  Apellido: <input type="text" name="apellido" value="{{old('apellido')}}"><br>
+                  E-mail: <input type="text" name="email" value="{{old('email')}}"><br>
+                  Teléfono: <input type="text" name="telefono" value="{{old('telefono')}}"><br>
 
 
 
                   <input type="submit" name="submit">
               </form>
+              @if ($errors->any())
+                <div class="alert alert-danger">
+                  <ul>
+                     @foreach ($errors->all() as $error)
+                     <li>{{ $error }}</li>
+                     @endforeach
+                 </ul>
+             </div>
+            @endif
 
                 <div class="links">
                     <a href="/">Home</a>

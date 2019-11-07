@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use File;
+use App\Http\Requests\ContactoRequest;
 
 class FormularioController extends Controller
 {
@@ -26,4 +27,21 @@ class FormularioController extends Controller
     	$nombre=$request->input('nombre')." ".$request->input('apellido');
     	return view('mostrardatos2',['nombre'=>$nombre, 'idiomas'=>$idiomas]);
     }
+    function mostrarvistavalidada(){
+    	return view ('formularioValidados');
+
+    }
+    function validardatos(ContactoRequest $request){
+
+    		
+
+    		return view ('mostrardatosvalidados')->with('nombre', $request->input('nombre'))->with('apellido', $request->input('apellido'))->with('email',$request->input('email'))->with('telefono', $request->input('telefono'));
+
+    }
+    function mostrarvistavalidada2(){
+    	return view ('formularioValidados2');
+
+    }
+    
+    
 }
