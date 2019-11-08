@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Rules\dni;
 
 class ContactoRequest extends FormRequest
 {
@@ -27,7 +28,9 @@ class ContactoRequest extends FormRequest
             'nombre'=>'required|string|min:2|max:15',
             'apellido'=>'required|string|min:2|max:20',
             'email'=>'required|email',
-            'telefono'=>'regex:/^[679][0-9]{8}$/'
+            'telefono'=>'regex:/^[679][0-9]{8}$/',
+            'dni'=>['required', new dni]
+           
 
             
         ];

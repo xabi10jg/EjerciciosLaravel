@@ -84,7 +84,8 @@
                     Nombre: {{$nombre}}<br>
                     Apellido: {{$apellido}}<br>
                     E-mail: {{$email}}<br>
-                    Teléfono: {{$telefono}}
+                    Teléfono: {{$telefono}}<br>
+                    DNI: {{$dni}}
                 
 
                 <div class="links">

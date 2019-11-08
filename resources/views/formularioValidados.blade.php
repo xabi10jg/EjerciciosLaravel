@@ -86,6 +86,7 @@
                   Apellido: <input type="text" name="apellido" value="{{old('apellido')}}"><br>
                   E-mail: <input type="text" name="email" value="{{old('email')}}"><br>
                   Teléfono: <input type="text" name="telefono" value="{{old('telefono')}}"><br>
+                  DNI: <input type="text" name="dni" value="{{old('dni')}}"><br>
 
 
 
